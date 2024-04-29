@@ -213,3 +213,108 @@
 # Pandas
 # Scipy
 # django
+
+# OOP - 
+# 1. Class & Object
+# 2. Inheritance
+# 3. Abstraction
+# 4. Encapsulation
+# 5. Polymorphism
+# Python Class ===================================
+
+class MyClass:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    # def __str__(self):
+    #     return f"{self.name} ({self.age})"
+    
+    def myfunc(self, location):
+        print("Hellow world", self.age, ' ', location)
+
+
+a = MyClass('ujjal', 20)
+# print(a.name)
+# print(a)
+a.age = 50
+# print(a.age)
+
+class Employee ():
+    # constructor method
+    def __init__(self, name, salary):
+        self.name = name
+        self.salary = salary
+    
+    # // instance method
+    def details(self):
+        print("Employe", self.salary)
+        print("Name", self.name)
+
+
+first = Employee("Kush", 1000)
+second  = Employee("raaa", 2000)
+
+# first.details()
+
+class ParentInfo:
+    def __init__(self, name, number):
+        print(f"my name is {name} & number is {number}")
+
+    def myInstanc(self):
+        print("print form instalce")
+
+    # class method
+    @classmethod
+    def myName (cls):
+        print("hellow classmethod")
+
+    # static method
+    def staticmethod():
+        print("hellow world")
+
+# x = ParentInfo('Ujjal', 9896867865)
+# ParentInfo.myName()
+# ParentInfo.myInstanc()
+# y = x.myName()
+# print(y)
+# x.myInstanc()
+
+# Inheritance
+
+class Myfunction1:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+
+class MyFunction2(Myfunction1):
+    pass
+
+# p = MyFunction2("first name", 25)
+# c = Myfunction1("zaman", 55)
+# print(p.name)
+# print(c.name)
+
+class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def area (self):
+        return self.length * self.width
+
+    def permeter(self):
+        return 2 * self.length + 2 * self.width
+
+class Square(Rectangle):
+    def __init__(self, length):
+        self.length = length
+        super().__init__(length, length)
+
+    def area(self):
+        return self.length * self.length
+    
+    def perimeter(self):
+        return 4 * self.length
+    
